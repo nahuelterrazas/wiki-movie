@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8502A46096600D69797 /* AppDelegate.swift */; };
 		32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8522A46096600D69797 /* SceneDelegate.swift */; };
-		32B0B8552A46096600D69797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8542A46096600D69797 /* ViewController.swift */; };
-		32B0B8582A46096600D69797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B8562A46096600D69797 /* Main.storyboard */; };
+		32B0B8552A46096600D69797 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8542A46096600D69797 /* HomeScreenVC.swift */; };
 		32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B8592A46096600D69797 /* Assets.xcassets */; };
 		32B0B85D2A46096600D69797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B85B2A46096600D69797 /* LaunchScreen.storyboard */; };
+		32B0B8662A460BC100D69797 /* WMTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8652A460BC100D69797 /* WMTitleLabel.swift */; };
+		32B0B8682A46316700D69797 /* WMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8672A46316700D69797 /* WMTabBarController.swift */; };
+		32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8692A46325000D69797 /* SearchVC.swift */; };
+		32B0B86C2A46327900D69797 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B86B2A46327900D69797 /* FavoritesVC.swift */; };
+		32B0B8702A46430600D69797 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B86F2A46430600D69797 /* SignInVC.swift */; };
+		32B0B8722A46833A00D69797 /* WatchlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8712A46833A00D69797 /* WatchlistVC.swift */; };
+		32F4D60E2A476EF300533FD0 /* WMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4D60D2A476EF300533FD0 /* WMTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32B0B84D2A46096600D69797 /* wikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B0B84D2A46096600D69797 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0B8502A46096600D69797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B0B8522A46096600D69797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32B0B8542A46096600D69797 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		32B0B8572A46096600D69797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32B0B8542A46096600D69797 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		32B0B8592A46096600D69797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32B0B85C2A46096600D69797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32B0B85E2A46096600D69797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B0B8652A460BC100D69797 /* WMTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMTitleLabel.swift; sourceTree = "<group>"; };
+		32B0B8672A46316700D69797 /* WMTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMTabBarController.swift; sourceTree = "<group>"; };
+		32B0B8692A46325000D69797 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		32B0B86B2A46327900D69797 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		32B0B86F2A46430600D69797 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		32B0B8712A46833A00D69797 /* WatchlistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistVC.swift; sourceTree = "<group>"; };
+		32F4D60D2A476EF300533FD0 /* WMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +52,7 @@
 		32B0B8442A46096600D69797 = {
 			isa = PBXGroup;
 			children = (
-				32B0B84F2A46096600D69797 /* wikiMovie */,
+				32B0B84F2A46096600D69797 /* WikiMovie */,
 				32B0B84E2A46096600D69797 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +60,61 @@
 		32B0B84E2A46096600D69797 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32B0B84D2A46096600D69797 /* wikiMovie.app */,
+				32B0B84D2A46096600D69797 /* WikiMovie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32B0B84F2A46096600D69797 /* wikiMovie */ = {
+		32B0B84F2A46096600D69797 /* WikiMovie */ = {
 			isa = PBXGroup;
 			children = (
-				32B0B8502A46096600D69797 /* AppDelegate.swift */,
-				32B0B8522A46096600D69797 /* SceneDelegate.swift */,
-				32B0B8542A46096600D69797 /* ViewController.swift */,
-				32B0B8562A46096600D69797 /* Main.storyboard */,
-				32B0B8592A46096600D69797 /* Assets.xcassets */,
-				32B0B85B2A46096600D69797 /* LaunchScreen.storyboard */,
+				32B0B8642A460B8E00D69797 /* Custom Views */,
+				32B0B86D2A4634EA00D69797 /* Screens */,
+				32B0B86E2A4634FF00D69797 /* Support */,
 				32B0B85E2A46096600D69797 /* Info.plist */,
 			);
-			path = wikiMovie;
+			path = WikiMovie;
+			sourceTree = "<group>";
+		};
+		32B0B8642A460B8E00D69797 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				32B0B8652A460BC100D69797 /* WMTitleLabel.swift */,
+				32F4D60D2A476EF300533FD0 /* WMTextField.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		32B0B86D2A4634EA00D69797 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				32B0B8542A46096600D69797 /* HomeScreenVC.swift */,
+				32B0B86F2A46430600D69797 /* SignInVC.swift */,
+				32B0B8692A46325000D69797 /* SearchVC.swift */,
+				32B0B86B2A46327900D69797 /* FavoritesVC.swift */,
+				32B0B8712A46833A00D69797 /* WatchlistVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		32B0B86E2A4634FF00D69797 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				32B0B8592A46096600D69797 /* Assets.xcassets */,
+				32B0B85B2A46096600D69797 /* LaunchScreen.storyboard */,
+				32B0B8672A46316700D69797 /* WMTabBarController.swift */,
+				32B0B8522A46096600D69797 /* SceneDelegate.swift */,
+				32B0B8502A46096600D69797 /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32B0B84C2A46096600D69797 /* wikiMovie */ = {
+		32B0B84C2A46096600D69797 /* WikiMovie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32B0B8612A46096600D69797 /* Build configuration list for PBXNativeTarget "wikiMovie" */;
+			buildConfigurationList = 32B0B8612A46096600D69797 /* Build configuration list for PBXNativeTarget "WikiMovie" */;
 			buildPhases = (
 				32B0B8492A46096600D69797 /* Sources */,
 				32B0B84A2A46096600D69797 /* Frameworks */,
@@ -82,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = wikiMovie;
+			name = WikiMovie;
 			productName = wikiMovie;
-			productReference = 32B0B84D2A46096600D69797 /* wikiMovie.app */;
+			productReference = 32B0B84D2A46096600D69797 /* WikiMovie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32B0B8482A46096600D69797 /* Build configuration list for PBXProject "wikiMovie" */;
+			buildConfigurationList = 32B0B8482A46096600D69797 /* Build configuration list for PBXProject "WikiMovie" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32B0B84C2A46096600D69797 /* wikiMovie */,
+				32B0B84C2A46096600D69797 /* WikiMovie */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +169,6 @@
 			files = (
 				32B0B85D2A46096600D69797 /* LaunchScreen.storyboard in Resources */,
 				32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */,
-				32B0B8582A46096600D69797 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +179,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B0B8552A46096600D69797 /* ViewController.swift in Sources */,
+				32B0B8722A46833A00D69797 /* WatchlistVC.swift in Sources */,
+				32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */,
+				32B0B8552A46096600D69797 /* HomeScreenVC.swift in Sources */,
+				32B0B8702A46430600D69797 /* SignInVC.swift in Sources */,
 				32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */,
+				32F4D60E2A476EF300533FD0 /* WMTextField.swift in Sources */,
+				32B0B8682A46316700D69797 /* WMTabBarController.swift in Sources */,
+				32B0B86C2A46327900D69797 /* FavoritesVC.swift in Sources */,
 				32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */,
+				32B0B8662A460BC100D69797 /* WMTitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		32B0B8562A46096600D69797 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				32B0B8572A46096600D69797 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		32B0B85B2A46096600D69797 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +329,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DB36S6ZG2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = wikiMovie/Info.plist;
+				INFOPLIST_FILE = WikiMovie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wiki Movie";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.wikiMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.WikiMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,10 +357,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DB36S6ZG2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = wikiMovie/Info.plist;
+				INFOPLIST_FILE = WikiMovie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wiki Movie";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,7 +368,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.wikiMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.WikiMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32B0B8482A46096600D69797 /* Build configuration list for PBXProject "wikiMovie" */ = {
+		32B0B8482A46096600D69797 /* Build configuration list for PBXProject "WikiMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32B0B85F2A46096600D69797 /* Debug */,
@@ -348,7 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32B0B8612A46096600D69797 /* Build configuration list for PBXNativeTarget "wikiMovie" */ = {
+		32B0B8612A46096600D69797 /* Build configuration list for PBXNativeTarget "WikiMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32B0B8622A46096600D69797 /* Debug */,
