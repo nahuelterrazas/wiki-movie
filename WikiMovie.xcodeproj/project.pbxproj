@@ -7,25 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */; };
+		32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FAB2A4E23B500178032 /* WMShowHideButton.swift */; };
 		32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8502A46096600D69797 /* AppDelegate.swift */; };
 		32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8522A46096600D69797 /* SceneDelegate.swift */; };
-		32B0B8552A46096600D69797 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8542A46096600D69797 /* HomeScreenVC.swift */; };
 		32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B8592A46096600D69797 /* Assets.xcassets */; };
 		32B0B85D2A46096600D69797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B85B2A46096600D69797 /* LaunchScreen.storyboard */; };
 		32B0B8662A460BC100D69797 /* WMTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8652A460BC100D69797 /* WMTitleLabel.swift */; };
 		32B0B8682A46316700D69797 /* WMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8672A46316700D69797 /* WMTabBarController.swift */; };
 		32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8692A46325000D69797 /* SearchVC.swift */; };
 		32B0B86C2A46327900D69797 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B86B2A46327900D69797 /* FavoritesVC.swift */; };
-		32B0B8702A46430600D69797 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B86F2A46430600D69797 /* SignInVC.swift */; };
+		32B0B8702A46430600D69797 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B86F2A46430600D69797 /* LoginVC.swift */; };
 		32B0B8722A46833A00D69797 /* WatchlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8712A46833A00D69797 /* WatchlistVC.swift */; };
+		32C4A7852A4DA85900680E44 /* WMPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C4A7842A4DA85900680E44 /* WMPasswordTextField.swift */; };
+		32D2DB7C2A4D3F8D003BCE81 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D2DB7B2A4D3F8D003BCE81 /* SignUpVC.swift */; };
+		32D614FB2A4D017500683726 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32D614FA2A4D017500683726 /* GoogleService-Info.plist */; };
 		32F4D60E2A476EF300533FD0 /* WMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4D60D2A476EF300533FD0 /* WMTextField.swift */; };
+		32FB46852A4D35F70032D2C5 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB46842A4D35F70032D2C5 /* RegisterUser.swift */; };
+		32FB46872A4D363C0032D2C5 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB46862A4D363C0032D2C5 /* LoginUser.swift */; };
+		32FB468A2A4D36B60032D2C5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB46892A4D36B60032D2C5 /* AuthService.swift */; };
+		EE1CF9116CB8E49AD74F8D60 /* Pods_WikiMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D16A8D976998267189DB4 /* Pods_WikiMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		32486FAB2A4E23B500178032 /* WMShowHideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMShowHideButton.swift; sourceTree = "<group>"; };
 		32B0B84D2A46096600D69797 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0B8502A46096600D69797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B0B8522A46096600D69797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32B0B8542A46096600D69797 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		32B0B8592A46096600D69797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32B0B85C2A46096600D69797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32B0B85E2A46096600D69797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,9 +42,18 @@
 		32B0B8672A46316700D69797 /* WMTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMTabBarController.swift; sourceTree = "<group>"; };
 		32B0B8692A46325000D69797 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		32B0B86B2A46327900D69797 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
-		32B0B86F2A46430600D69797 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		32B0B86F2A46430600D69797 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		32B0B8712A46833A00D69797 /* WatchlistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistVC.swift; sourceTree = "<group>"; };
+		32C4A7842A4DA85900680E44 /* WMPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMPasswordTextField.swift; sourceTree = "<group>"; };
+		32D2DB7B2A4D3F8D003BCE81 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		32D614FA2A4D017500683726 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32F4D60D2A476EF300533FD0 /* WMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMTextField.swift; sourceTree = "<group>"; };
+		32FB46842A4D35F70032D2C5 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		32FB46862A4D363C0032D2C5 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		32FB46892A4D36B60032D2C5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8B6D16A8D976998267189DB4 /* Pods_WikiMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D3AB47D74A34D7D1673A0C0 /* Pods-WikiMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.debug.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		C47157D24EC8548C259D773A /* Pods-WikiMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.release.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1CF9116CB8E49AD74F8D60 /* Pods_WikiMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32486FA52A4E1FBB00178032 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		32B0B8442A46096600D69797 = {
 			isa = PBXGroup;
 			children = (
 				32B0B84F2A46096600D69797 /* WikiMovie */,
 				32B0B84E2A46096600D69797 /* Products */,
+				717B815C6CD98D549955FC65 /* Pods */,
+				6E3C5801A5C9F9F056C9990A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +97,14 @@
 		32B0B84F2A46096600D69797 /* WikiMovie */ = {
 			isa = PBXGroup;
 			children = (
+				32486FA52A4E1FBB00178032 /* Extensions */,
+				32FB46882A4D36A20032D2C5 /* Networking */,
+				32FB46832A4D35E00032D2C5 /* Models */,
 				32B0B8642A460B8E00D69797 /* Custom Views */,
 				32B0B86D2A4634EA00D69797 /* Screens */,
 				32B0B86E2A4634FF00D69797 /* Support */,
 				32B0B85E2A46096600D69797 /* Info.plist */,
+				32D614FA2A4D017500683726 /* GoogleService-Info.plist */,
 			);
 			path = WikiMovie;
 			sourceTree = "<group>";
@@ -81,6 +114,8 @@
 			children = (
 				32B0B8652A460BC100D69797 /* WMTitleLabel.swift */,
 				32F4D60D2A476EF300533FD0 /* WMTextField.swift */,
+				32C4A7842A4DA85900680E44 /* WMPasswordTextField.swift */,
+				32486FAB2A4E23B500178032 /* WMShowHideButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -88,8 +123,8 @@
 		32B0B86D2A4634EA00D69797 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				32B0B8542A46096600D69797 /* HomeScreenVC.swift */,
-				32B0B86F2A46430600D69797 /* SignInVC.swift */,
+				32B0B86F2A46430600D69797 /* LoginVC.swift */,
+				32D2DB7B2A4D3F8D003BCE81 /* SignUpVC.swift */,
 				32B0B8692A46325000D69797 /* SearchVC.swift */,
 				32B0B86B2A46327900D69797 /* FavoritesVC.swift */,
 				32B0B8712A46833A00D69797 /* WatchlistVC.swift */,
@@ -109,6 +144,40 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		32FB46832A4D35E00032D2C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32FB46842A4D35F70032D2C5 /* RegisterUser.swift */,
+				32FB46862A4D363C0032D2C5 /* LoginUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		32FB46882A4D36A20032D2C5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				32FB46892A4D36B60032D2C5 /* AuthService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6E3C5801A5C9F9F056C9990A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B6D16A8D976998267189DB4 /* Pods_WikiMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		717B815C6CD98D549955FC65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D3AB47D74A34D7D1673A0C0 /* Pods-WikiMovie.debug.xcconfig */,
+				C47157D24EC8548C259D773A /* Pods-WikiMovie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32B0B8612A46096600D69797 /* Build configuration list for PBXNativeTarget "WikiMovie" */;
 			buildPhases = (
+				FE939B0AA41246FCC87EE274 /* [CP] Check Pods Manifest.lock */,
 				32B0B8492A46096600D69797 /* Sources */,
 				32B0B84A2A46096600D69797 /* Frameworks */,
 				32B0B84B2A46096600D69797 /* Resources */,
+				1DFF34F2AD0617D6D86EC6E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,10 +240,53 @@
 			files = (
 				32B0B85D2A46096600D69797 /* LaunchScreen.storyboard in Resources */,
 				32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */,
+				32D614FB2A4D017500683726 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DFF34F2AD0617D6D86EC6E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE939B0AA41246FCC87EE274 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32B0B8492A46096600D69797 /* Sources */ = {
@@ -180,15 +294,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B0B8722A46833A00D69797 /* WatchlistVC.swift in Sources */,
+				32FB46852A4D35F70032D2C5 /* RegisterUser.swift in Sources */,
+				32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */,
 				32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */,
-				32B0B8552A46096600D69797 /* HomeScreenVC.swift in Sources */,
-				32B0B8702A46430600D69797 /* SignInVC.swift in Sources */,
+				32B0B8702A46430600D69797 /* LoginVC.swift in Sources */,
 				32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */,
+				32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */,
 				32F4D60E2A476EF300533FD0 /* WMTextField.swift in Sources */,
 				32B0B8682A46316700D69797 /* WMTabBarController.swift in Sources */,
+				32FB46872A4D363C0032D2C5 /* LoginUser.swift in Sources */,
+				32C4A7852A4DA85900680E44 /* WMPasswordTextField.swift in Sources */,
 				32B0B86C2A46327900D69797 /* FavoritesVC.swift in Sources */,
 				32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */,
 				32B0B8662A460BC100D69797 /* WMTitleLabel.swift in Sources */,
+				32D2DB7C2A4D3F8D003BCE81 /* SignUpVC.swift in Sources */,
+				32FB468A2A4D36B60032D2C5 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +442,12 @@
 		};
 		32B0B8622A46096600D69797 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D3AB47D74A34D7D1673A0C0 /* Pods-WikiMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WikiMovie/WikiMovie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DB36S6ZG2;
@@ -342,6 +465,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.WikiMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,9 +474,12 @@
 		};
 		32B0B8632A46096600D69797 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C47157D24EC8548C259D773A /* Pods-WikiMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WikiMovie/WikiMovie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DB36S6ZG2;
@@ -370,6 +497,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nahuelterrazas.WikiMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
