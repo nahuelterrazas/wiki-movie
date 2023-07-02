@@ -78,7 +78,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         view.addSubview(callToActionButton)
         callToActionButton.configuration = configuration
         callToActionButton.translatesAutoresizingMaskIntoConstraints = false
-        callToActionButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+        callToActionButton.addTarget(self, action: #selector(registerRequest), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             callToActionButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
@@ -92,10 +92,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case usernameTextField:
-            usernameTextField.resignFirstResponder()
             emailTextField.becomeFirstResponder()
         case emailTextField:
-            emailTextField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
         default:
             textField.resignFirstResponder()
@@ -110,7 +108,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @objc func register() {
+    @objc func registerRequest() {
         let userToRegister = RegisterUser(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
         
         if !usernameTextField.hasText || !passwordTextField.hasText {
@@ -119,12 +117,12 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         }
         
         AuthService.shared.registerUser(with: userToRegister) { wasRegistered, error in
-            DispatchQueue.main.async { // if was registered....
+            DispatchQueue.main.async {
                 if wasRegistered {
                     
                     let alert = UIAlertController(title: "Completed", message: "Your new account has been registered", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
-                        self.view.window?.rootViewController = WMTabBarController()
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setNewRootViewController()
                     }))
                     self.present(alert, animated: true)
                 } else {

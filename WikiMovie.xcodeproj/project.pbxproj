@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */; };
 		32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FAB2A4E23B500178032 /* WMShowHideButton.swift */; };
+		328492A62A5225B600ADAD38 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */; };
 		32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8502A46096600D69797 /* AppDelegate.swift */; };
 		32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8522A46096600D69797 /* SceneDelegate.swift */; };
 		32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B8592A46096600D69797 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		32486FAB2A4E23B500178032 /* WMShowHideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMShowHideButton.swift; sourceTree = "<group>"; };
+		328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		32B0B84D2A46096600D69797 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0B8502A46096600D69797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B0B8522A46096600D69797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				32B0B86F2A46430600D69797 /* LoginVC.swift */,
 				32D2DB7B2A4D3F8D003BCE81 /* SignUpVC.swift */,
+				328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */,
 				32B0B8692A46325000D69797 /* SearchVC.swift */,
 				32B0B86B2A46327900D69797 /* FavoritesVC.swift */,
 				32B0B8712A46833A00D69797 /* WatchlistVC.swift */,
@@ -299,6 +302,7 @@
 				32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */,
 				32B0B8702A46430600D69797 /* LoginVC.swift in Sources */,
 				32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */,
+				328492A62A5225B600ADAD38 /* ForgotPasswordVC.swift in Sources */,
 				32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */,
 				32F4D60E2A476EF300533FD0 /* WMTextField.swift in Sources */,
 				32B0B8682A46316700D69797 /* WMTabBarController.swift in Sources */,

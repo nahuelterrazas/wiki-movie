@@ -26,9 +26,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         configureNavigationBar()
     }
     
+    
     func configureNavigationBar() {
         UINavigationBar.appearance().tintColor = .systemGreen
     }
+    
+    
+    func setNewRootViewController() {
+        let newNavigationController = UINavigationController(rootViewController: WMTabBarController())
+        window?.rootViewController = newNavigationController
+        
+        UIView.transition(with: window!,
+                          duration: 0.8,
+                          options: .transitionCrossDissolve,
+                          animations: nil)
+    }
+ 
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

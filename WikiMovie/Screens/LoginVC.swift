@@ -13,7 +13,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     let usernameTextField = WMTextField()
     let passwordTextField = WMPasswordTextField()
     let signInButton = UIButton()
-    let callToCreateAccountButton = UIButton()
+    let createAccountButton = UIButton()
+    let forgotPasswordButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         configureUsernameTF()
         configurePasswordTF()
         configureSignInButton()
-        configureCallToSignUpScreen()
+        configureCreateAccountButton()
+        configureForgotPasswordButton()
         createDismissKeyboardGesture()
         view.backgroundColor = .secondarySystemBackground
         
@@ -81,7 +83,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         view.addSubview(signInButton)
         signInButton.configuration = configuration
         signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.addTarget(self, action: #selector(authentication), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(authenticationRequest), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
@@ -92,26 +94,41 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    func configureCallToSignUpScreen() {
-
-        var configuration = UIButton.Configuration.filled()
-        configuration.title = "Sign Up Now"
-        configuration.baseBackgroundColor = .placeholderText
-
-        view.addSubview(callToCreateAccountButton)
-        callToCreateAccountButton.configuration = configuration
-        callToCreateAccountButton.addTarget(self, action: #selector(pushSignUpVC), for: .touchUpInside)
-        callToCreateAccountButton.translatesAutoresizingMaskIntoConstraints = false
+    func configureForgotPasswordButton(){
+        var configuration = UIButton.Configuration.plain()
+        configuration.title = "Forgot password?"
+        configuration.buttonSize = .small
+        
+        view.addSubview(forgotPasswordButton)
+        forgotPasswordButton.configuration = configuration
+        forgotPasswordButton.addTarget(self, action: #selector(pushResetPasswordVC), for: .touchUpInside)
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            callToCreateAccountButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
-            callToCreateAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            callToCreateAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            callToCreateAccountButton.heightAnchor.constraint(equalToConstant: 50)
+            forgotPasswordButton.topAnchor.constraint(equalTo: createAccountButton.bottomAnchor, constant: 10),
+            forgotPasswordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+
+    
+    func configureCreateAccountButton() {
+
+        var configuration = UIButton.Configuration.plain()
+        configuration.title = "New user? Create Account."
+
+        view.addSubview(createAccountButton)
+        createAccountButton.configuration = configuration
+        createAccountButton.addTarget(self, action: #selector(pushSignUpVC), for: .touchUpInside)
+        createAccountButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            createAccountButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 15),
+            createAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            createAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            createAccountButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
     }
-    
     
     
     func createDismissKeyboardGesture() {
@@ -123,7 +140,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case usernameTextField:
-            usernameTextField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
         default:
             textField.resignFirstResponder()
@@ -132,8 +148,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @objc func authentication() {
-        
+    @objc func authenticationRequest() {
         if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             presentAlert(title: "Error", message: "Please enter your credentials", buttonTitle: "Return", buttonStyle: .destructive)
             return
@@ -145,19 +160,24 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         AuthService.shared.signIn(with: loginUser, completion: { result, error in
             if result {
-                self.view.window?.rootViewController = WMTabBarController()
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setNewRootViewController()
             } else {
                 print("User not registered")
                 self.presentAlert(title: "Unknown User", message: error?.localizedDescription ?? "", buttonTitle: "Return", buttonStyle: .destructive)
             }
-            
         })
     }
     
+    
+    @objc func pushResetPasswordVC() {
+        let resetVC = ForgotPasswordVC()
+        self.navigationController?.present(resetVC, animated: true)
+    }
+    
+    
     @objc func pushSignUpVC() {
         let signUpVC = SignUpVC()
-        signUpVC.title = "Sign Up"
-        self.navigationController?.pushViewController(signUpVC, animated: true)
+        self.navigationController?.present(signUpVC, animated: true)
     }
     
 }
