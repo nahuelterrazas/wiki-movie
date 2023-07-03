@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-
         let homeViewController = LoginVC()
         let navigationController = UINavigationController(rootViewController: homeViewController)
 
@@ -28,12 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func configureNavigationBar() {
-        UINavigationBar.appearance().tintColor = .systemGreen
+        UINavigationBar.appearance().tintColor = .systemRed
     }
     
-    
+    #warning("rootViewController goes back to homeViewController after the scene enters the background")
     func setNewRootViewController() {
-        let newNavigationController = UINavigationController(rootViewController: WMTabBarController())
+        let newNavigationController = WMTabBarController()
         window?.rootViewController = newNavigationController
         
         UIView.transition(with: window!,
