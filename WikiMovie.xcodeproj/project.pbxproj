@@ -10,6 +10,10 @@
 		32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */; };
 		32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FAB2A4E23B500178032 /* WMShowHideButton.swift */; };
 		328492A62A5225B600ADAD38 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */; };
+		328492AB2A524E4200ADAD38 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492AA2A524E4200ADAD38 /* MovieCell.swift */; };
+		328492AD2A524F8C00ADAD38 /* WMPosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492AC2A524F8C00ADAD38 /* WMPosterImageView.swift */; };
+		328492AF2A52531400ADAD38 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492AE2A52531400ADAD38 /* Movie.swift */; };
+		328492B12A52582500ADAD38 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492B02A52582500ADAD38 /* UIHelper.swift */; };
 		32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8502A46096600D69797 /* AppDelegate.swift */; };
 		32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0B8522A46096600D69797 /* SceneDelegate.swift */; };
 		32B0B85A2A46096600D69797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B0B8592A46096600D69797 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		32486FAB2A4E23B500178032 /* WMShowHideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMShowHideButton.swift; sourceTree = "<group>"; };
 		328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		328492AA2A524E4200ADAD38 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		328492AC2A524F8C00ADAD38 /* WMPosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMPosterImageView.swift; sourceTree = "<group>"; };
+		328492AE2A52531400ADAD38 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		328492B02A52582500ADAD38 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		32B0B84D2A46096600D69797 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0B8502A46096600D69797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B0B8522A46096600D69797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		328492A72A524DE800ADAD38 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				328492AA2A524E4200ADAD38 /* MovieCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		32B0B8442A46096600D69797 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +123,7 @@
 				32B0B86E2A4634FF00D69797 /* Support */,
 				32B0B85E2A46096600D69797 /* Info.plist */,
 				32D614FA2A4D017500683726 /* GoogleService-Info.plist */,
+				328492B02A52582500ADAD38 /* UIHelper.swift */,
 			);
 			path = WikiMovie;
 			sourceTree = "<group>";
@@ -114,10 +131,12 @@
 		32B0B8642A460B8E00D69797 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				328492A72A524DE800ADAD38 /* Cells */,
 				32B0B8652A460BC100D69797 /* WMTitleLabel.swift */,
 				32F4D60D2A476EF300533FD0 /* WMTextField.swift */,
 				32C4A7842A4DA85900680E44 /* WMPasswordTextField.swift */,
 				32486FAB2A4E23B500178032 /* WMShowHideButton.swift */,
+				328492AC2A524F8C00ADAD38 /* WMPosterImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -152,6 +171,7 @@
 			children = (
 				32FB46842A4D35F70032D2C5 /* RegisterUser.swift */,
 				32FB46862A4D363C0032D2C5 /* LoginUser.swift */,
+				328492AE2A52531400ADAD38 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +318,7 @@
 			files = (
 				32B0B8722A46833A00D69797 /* WatchlistVC.swift in Sources */,
 				32FB46852A4D35F70032D2C5 /* RegisterUser.swift in Sources */,
+				328492AB2A524E4200ADAD38 /* MovieCell.swift in Sources */,
 				32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */,
 				32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */,
 				32B0B8702A46430600D69797 /* LoginVC.swift in Sources */,
@@ -309,10 +330,13 @@
 				32FB46872A4D363C0032D2C5 /* LoginUser.swift in Sources */,
 				32C4A7852A4DA85900680E44 /* WMPasswordTextField.swift in Sources */,
 				32B0B86C2A46327900D69797 /* FavoritesVC.swift in Sources */,
+				328492AF2A52531400ADAD38 /* Movie.swift in Sources */,
 				32B0B8532A46096600D69797 /* SceneDelegate.swift in Sources */,
 				32B0B8662A460BC100D69797 /* WMTitleLabel.swift in Sources */,
+				328492AD2A524F8C00ADAD38 /* WMPosterImageView.swift in Sources */,
 				32D2DB7C2A4D3F8D003BCE81 /* SignUpVC.swift in Sources */,
 				32FB468A2A4D36B60032D2C5 /* AuthService.swift in Sources */,
+				328492B12A52582500ADAD38 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

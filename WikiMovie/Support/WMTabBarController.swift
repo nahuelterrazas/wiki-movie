@@ -17,14 +17,14 @@ class WMTabBarController: UITabBarController {
     
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
-//        searchVC.title = "Search"
-        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        searchVC.title = "Popular Movies"
+        searchVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), tag: 0)
         return UINavigationController(rootViewController: searchVC)
     }
     
     func createFavoritesNC() -> UINavigationController {
         let favoritesVC = FavoritesVC()
-//        favoritesVC.title = "Favorites"
+        favoritesVC.title = "Favorites"
         favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         return UINavigationController(rootViewController: favoritesVC)
     }
@@ -32,7 +32,7 @@ class WMTabBarController: UITabBarController {
     func createWatchlistNC() -> UINavigationController {
         let watchlistVC = WatchlistVC()
         watchlistVC.tabBarItem = UITabBarItem(title: "Watchlist", image: UIImage(systemName: "list.and.film"), tag: 0)
-//        watchlistVC.title = "Watchlist"
+        watchlistVC.title = "Watchlist"
 
         return UINavigationController(rootViewController: watchlistVC)
     }
