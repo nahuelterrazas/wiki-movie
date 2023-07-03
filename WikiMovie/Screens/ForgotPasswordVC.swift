@@ -68,6 +68,7 @@ class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
     
     
     @objc func resetPasswordRequest(){
+        showLoadingView()
         AuthService.shared.resetPassword(email: emailTextField.text ?? "") { error in
             if let error = error {
                 self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Return", buttonStyle: .destructive)

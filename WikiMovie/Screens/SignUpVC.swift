@@ -109,6 +109,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     
     
     @objc func registerRequest() {
+        showLoadingView()
         let userToRegister = RegisterUser(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
         
         if !usernameTextField.hasText || !passwordTextField.hasText {

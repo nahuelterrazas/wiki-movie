@@ -149,6 +149,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @objc func authenticationRequest() {
+        showLoadingView()
         if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             presentAlert(title: "Error", message: "Please enter your credentials", buttonTitle: "Return", buttonStyle: .destructive)
             return
@@ -171,13 +172,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @objc func pushResetPasswordVC() {
         let resetVC = ForgotPasswordVC()
-        self.navigationController?.present(resetVC, animated: true)
+        resetVC.title = "Password Assistance"
+        self.navigationController?.pushViewController(resetVC, animated: true)
     }
     
     
     @objc func pushSignUpVC() {
         let signUpVC = SignUpVC()
-        self.navigationController?.present(signUpVC, animated: true)
+        signUpVC.title = "Sign Up"
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
 }
