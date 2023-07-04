@@ -8,11 +8,14 @@
 import Foundation
 
 struct Movie: Codable, Hashable {
+    let uuid = UUID()
     let id: Int
     let title: String
     let posterPath: String?
+    
+    private enum CodingKeys: String, CodingKey { case id, title, posterPath }
 }
 
-struct MovieList: Codable, Hashable {
+struct MovieList: Codable {
     let results: [Movie]
 }

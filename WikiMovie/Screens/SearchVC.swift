@@ -11,7 +11,10 @@ class SearchVC: UIViewController {
     
     enum Section{case main}
     var movies: [Movie] = []
+    var filteredMovies: [Movie] = []
     var page = 1
+    var isSearching = false
+    
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Movie>!
     
@@ -20,6 +23,7 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
+        configureSearchController()
         getMovies()
         configureDataSource()
     }
@@ -39,6 +43,14 @@ class SearchVC: UIViewController {
     }
     
     
+    func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchBar.placeholder = "Seach a movie"
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+    }
+    
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { (collectionView, indexPath, itemIdentifier) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.reuseID, for: indexPath) as! MovieCell
@@ -48,24 +60,38 @@ class SearchVC: UIViewController {
     }
     
     
-    func updateData() {
+    func updateData(on movies: [Movie]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Movie>()
         snapshot.appendSections([.main])
         snapshot.appendItems(movies)
-        dataSource.apply(snapshot, animatingDifferences: true)
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot, animatingDifferences: true)
+        }
     }
 
     
     func getMovies() {
         showLoadingView()
         NetworkManager.shared.getMovies(page: self.page) { [weak self] result in
-
             guard let self = self else { return }
             self.dismissLoadingView()
             switch result {
             case.success(let moviesList):
                 self.movies.append(contentsOf: moviesList.results)
-                self.updateData()
+                self.updateData(on: self.movies)
+            case.failure(let error):
+                self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Cancel", buttonStyle: .destructive)
+            }
+        }
+    }
+    
+    
+    func searchMovies(title: String){
+        NetworkManager.shared.getMovies (title: title) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case.success(let moviesList):
+                self.updateData(on: moviesList.results)
             case.failure(let error):
                 self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Cancel", buttonStyle: .destructive)
             }
@@ -81,10 +107,27 @@ extension SearchVC: UICollectionViewDelegate {
         let height = scrollView.frame.height
         
         if offSetY > contentHeight - height {
-            if page<=5{
-                page+=1
-                getMovies()
-            }
+            guard page<9, !isSearching else {return}
+            page+=1
+            getMovies()
         }
     }
+}
+
+
+extension SearchVC: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            updateData(on: movies)
+            return
+        }
+        searchMovies(title: filter.replacingOccurrences(of: " ", with: "+"))
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        updateData(on: movies)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) { isSearching = true }
 }
