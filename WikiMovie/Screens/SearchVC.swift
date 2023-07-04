@@ -9,26 +9,9 @@ import UIKit
 
 class SearchVC: UIViewController {
     
-    enum Section{
-        case main
-    }
-    
-    var movies: [Movie] = [
-        Movie(id: 1, title: "", posterPath: ""),
-        Movie(id: 2, title: "", posterPath: ""),
-        Movie(id: 3, title: "", posterPath: ""),
-        Movie(id: 4, title: "", posterPath: ""),
-        Movie(id: 5, title: "", posterPath: ""),
-        Movie(id: 6, title: "", posterPath: ""),
-        Movie(id: 7, title: "", posterPath: ""),
-        Movie(id: 8, title: "", posterPath: ""),
-        Movie(id: 9, title: "", posterPath: ""),
-        Movie(id: 10, title: "", posterPath: ""),
-        Movie(id: 11, title: "", posterPath: ""),
-        Movie(id: 12, title: "", posterPath: ""),
-        Movie(id: 13, title: "", posterPath: "")
-    ]
-
+    enum Section{case main}
+    var movies: [Movie] = []
+    var page = 1
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Movie>!
     
@@ -37,8 +20,8 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
+        getMovies()
         configureDataSource()
-        updateData()
     }
 
     
@@ -51,6 +34,7 @@ class SearchVC: UIViewController {
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
+        collectionView.delegate = self
         collectionView.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.reuseID)
     }
     
@@ -71,4 +55,36 @@ class SearchVC: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 
+    
+    func getMovies() {
+        showLoadingView()
+        NetworkManager.shared.getMovies(page: self.page) { [weak self] result in
+
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            switch result {
+            case.success(let moviesList):
+                self.movies.append(contentsOf: moviesList.results)
+                self.updateData()
+            case.failure(let error):
+                self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Cancel", buttonStyle: .destructive)
+            }
+        }
+    }
+}
+
+
+extension SearchVC: UICollectionViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offSetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.height
+        
+        if offSetY > contentHeight - height {
+            if page<=5{
+                page+=1
+                getMovies()
+            }
+        }
+    }
 }

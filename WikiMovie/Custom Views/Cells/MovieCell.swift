@@ -24,8 +24,9 @@ class MovieCell: UICollectionViewCell {
     
     
     func set(movie: Movie) {
-//        movieImagView.downloadImage = movie.posterPath
+        movieImagView.downloadImage(urlString: Constants().posterURL + movie.posterPath!)
     }
+    
     
     private func configure() {
         addSubview(movieImagView)
@@ -37,5 +38,11 @@ class MovieCell: UICollectionViewCell {
             movieImagView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding),
             movieImagView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -padding),
         ])
+    }
+    
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.movieImagView.image = UIImage(named: "placeholder")
     }
 }

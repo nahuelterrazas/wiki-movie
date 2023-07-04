@@ -13,3 +13,6 @@ struct Movie: Codable, Hashable {
     let posterPath: String?
 }
 
+struct MovieList: Codable, Hashable {
+    let results: [Movie]
+}

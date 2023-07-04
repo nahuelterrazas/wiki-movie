@@ -15,7 +15,7 @@ extension UIViewController {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: buttonTitle , style: buttonStyle))
             self.present(alert, animated: true)
-            self.dismissLoadingView()
+            if containerView != nil { self.dismissLoadingView()}
         }
     }
     
@@ -41,8 +41,11 @@ extension UIViewController {
     }
     
     func dismissLoadingView() {
-        containerView.removeFromSuperview()
-        containerView = nil
+        DispatchQueue.main.async {
+            containerView.removeFromSuperview()
+            containerView = nil
+        }
+
     }
 }
 

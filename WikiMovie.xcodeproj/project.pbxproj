@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */; };
 		32486FAC2A4E23B500178032 /* WMShowHideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32486FAB2A4E23B500178032 /* WMShowHideButton.swift */; };
+		3250F0AE2A539C2F00F3F760 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250F0AD2A539C2F00F3F760 /* NetworkManager.swift */; };
+		3250F0B02A539FBD00F3F760 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250F0AF2A539FBD00F3F760 /* Constants.swift */; };
+		3250F0B22A53A87400F3F760 /* WMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250F0B12A53A87400F3F760 /* WMError.swift */; };
 		328492A62A5225B600ADAD38 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */; };
 		328492AB2A524E4200ADAD38 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492AA2A524E4200ADAD38 /* MovieCell.swift */; };
 		328492AD2A524F8C00ADAD38 /* WMPosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328492AC2A524F8C00ADAD38 /* WMPosterImageView.swift */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		32486FA62A4E1FE900178032 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		32486FAB2A4E23B500178032 /* WMShowHideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMShowHideButton.swift; sourceTree = "<group>"; };
+		3250F0AD2A539C2F00F3F760 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3250F0AF2A539FBD00F3F760 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3250F0B12A53A87400F3F760 /* WMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMError.swift; sourceTree = "<group>"; };
 		328492A52A5225B600ADAD38 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		328492AA2A524E4200ADAD38 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		328492AC2A524F8C00ADAD38 /* WMPosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMPosterImageView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3250F0B32A53D7FE00F3F760 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3250F0AF2A539FBD00F3F760 /* Constants.swift */,
+				328492B02A52582500ADAD38 /* UIHelper.swift */,
+				3250F0B12A53A87400F3F760 /* WMError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		328492A72A524DE800ADAD38 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,15 +131,15 @@
 		32B0B84F2A46096600D69797 /* WikiMovie */ = {
 			isa = PBXGroup;
 			children = (
-				32486FA52A4E1FBB00178032 /* Extensions */,
-				32FB46882A4D36A20032D2C5 /* Networking */,
 				32FB46832A4D35E00032D2C5 /* Models */,
 				32B0B8642A460B8E00D69797 /* Custom Views */,
 				32B0B86D2A4634EA00D69797 /* Screens */,
+				3250F0B32A53D7FE00F3F760 /* Utilities */,
+				32486FA52A4E1FBB00178032 /* Extensions */,
+				32FB46882A4D36A20032D2C5 /* Networking */,
 				32B0B86E2A4634FF00D69797 /* Support */,
 				32B0B85E2A46096600D69797 /* Info.plist */,
 				32D614FA2A4D017500683726 /* GoogleService-Info.plist */,
-				328492B02A52582500ADAD38 /* UIHelper.swift */,
 			);
 			path = WikiMovie;
 			sourceTree = "<group>";
@@ -180,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				32FB46892A4D36B60032D2C5 /* AuthService.swift */,
+				3250F0AD2A539C2F00F3F760 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -320,7 +337,9 @@
 				32FB46852A4D35F70032D2C5 /* RegisterUser.swift in Sources */,
 				328492AB2A524E4200ADAD38 /* MovieCell.swift in Sources */,
 				32486FA72A4E1FE900178032 /* UIViewController+Ext.swift in Sources */,
+				3250F0AE2A539C2F00F3F760 /* NetworkManager.swift in Sources */,
 				32B0B86A2A46325000D69797 /* SearchVC.swift in Sources */,
+				3250F0B02A539FBD00F3F760 /* Constants.swift in Sources */,
 				32B0B8702A46430600D69797 /* LoginVC.swift in Sources */,
 				32B0B8512A46096600D69797 /* AppDelegate.swift in Sources */,
 				328492A62A5225B600ADAD38 /* ForgotPasswordVC.swift in Sources */,
@@ -337,6 +356,7 @@
 				32D2DB7C2A4D3F8D003BCE81 /* SignUpVC.swift in Sources */,
 				32FB468A2A4D36B60032D2C5 /* AuthService.swift in Sources */,
 				328492B12A52582500ADAD38 /* UIHelper.swift in Sources */,
+				3250F0B22A53A87400F3F760 /* WMError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
