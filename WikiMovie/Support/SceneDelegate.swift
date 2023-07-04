@@ -17,20 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let homeViewController = LoginVC()
         let navigationController = UINavigationController(rootViewController: homeViewController)
-
+        
+        configureNavigationBar()
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        configureNavigationBar()
     }
-    
     
     func configureNavigationBar() {
         UINavigationBar.appearance().tintColor = .systemRed
     }
     
-    #warning("rootViewController goes back to homeViewController after the scene enters the background")
     func setNewRootViewController() {
         let newNavigationController = WMTabBarController()
         window?.rootViewController = newNavigationController
@@ -40,7 +38,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           options: .transitionCrossDissolve,
                           animations: nil)
     }
- 
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
