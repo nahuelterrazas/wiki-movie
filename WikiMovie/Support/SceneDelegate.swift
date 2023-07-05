@@ -18,16 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeViewController = LoginVC()
         let navigationController = UINavigationController(rootViewController: homeViewController)
         
-        configureNavigationBar()
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
-    func configureNavigationBar() {
-        UINavigationBar.appearance().tintColor = .systemRed
-    }
     
     func setNewRootViewController() {
         let newNavigationController = WMTabBarController()

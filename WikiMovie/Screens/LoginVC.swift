@@ -25,7 +25,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         configureCreateAccountButton()
         configureForgotPasswordButton()
         createDismissKeyboardGesture()
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = .systemBackground
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
@@ -35,14 +35,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func configureAppIconImageView() {
         view.addSubview(appIconImageView)
         appIconImageView.translatesAutoresizingMaskIntoConstraints = false
-        appIconImageView.image = UIImage(named: "popcorn")
+        appIconImageView.image = UIImage(named: "logo")
         appIconImageView.contentMode = .scaleAspectFill
         
         NSLayoutConstraint.activate([
-            appIconImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            appIconImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             appIconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            appIconImageView.widthAnchor.constraint(equalToConstant: 100),
-            appIconImageView.heightAnchor.constraint(equalToConstant: 100)
+            appIconImageView.widthAnchor.constraint(equalToConstant: 150),
+            appIconImageView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
@@ -77,7 +77,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     func configureSignInButton() {
         var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = .systemRed
         configuration.title = "Sign In"
         
         view.addSubview(signInButton)
@@ -151,7 +150,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @objc func authenticationRequest() {
         showLoadingView()
         if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
-            presentAlert(title: "Error", message: "Please enter your credentials", buttonTitle: "Return", buttonStyle: .destructive)
+            presentAlert(title: "Error", message: "Please enter your credentials", buttonTitle: "Return", buttonStyle: .cancel)
             return
         }
         

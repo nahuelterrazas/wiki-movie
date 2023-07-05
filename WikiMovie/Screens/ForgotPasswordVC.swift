@@ -39,7 +39,6 @@ class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
 
     func configureResetButton() {
         var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = .systemRed
         configuration.title = "Reset Password"
         
         view.addSubview(resetButton)
@@ -71,7 +70,7 @@ class ForgotPasswordVC: UIViewController, UITextFieldDelegate {
         showLoadingView()
         AuthService.shared.resetPassword(email: emailTextField.text ?? "") { error in
             if let error = error {
-                self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Return", buttonStyle: .destructive)
+                self.presentAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Return", buttonStyle: .cancel)
             } else {
                 self.presentAlert(title: "Check your inbox", message: "An email to reset your password has been sent", buttonTitle: "Return", buttonStyle: .default)
             }

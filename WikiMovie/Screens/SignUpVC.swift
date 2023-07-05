@@ -72,7 +72,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     
     func configureCallToActionButton() {
         var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = .systemRed
         configuration.title = "Create Account"
 
         view.addSubview(callToActionButton)
@@ -113,7 +112,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         let userToRegister = RegisterUser(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
         
         if !usernameTextField.hasText || !passwordTextField.hasText {
-            presentAlert(title: "Error", message: "Please complete all required fields", buttonTitle: "Return", buttonStyle: .destructive)
+            presentAlert(title: "Error", message: "Please complete all required fields", buttonTitle: "Return", buttonStyle: .cancel)
             return
         }
         
@@ -122,7 +121,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                 if wasRegistered {
                     
                     let alert = UIAlertController(title: "Completed", message: "Your new account has been registered", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                    alert.addAction(UIAlertAction(title: "Continue", style: .cancel, handler: { _ in
                         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setNewRootViewController()
                     }))
                     self.present(alert, animated: true)

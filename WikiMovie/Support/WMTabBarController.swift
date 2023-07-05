@@ -11,21 +11,20 @@ class WMTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().tintColor = .systemRed
         viewControllers = [createSearchNC(), createFavoritesNC(), createWatchlistNC()]
     }
     
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
         searchVC.title = "Popular Movies"
-        searchVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), tag: 0)
+        searchVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         return UINavigationController(rootViewController: searchVC)
     }
     
     func createFavoritesNC() -> UINavigationController {
         let favoritesVC = FavoritesVC()
         favoritesVC.title = "Favorites"
-        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        favoritesVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 0)
         return UINavigationController(rootViewController: favoritesVC)
     }
     
